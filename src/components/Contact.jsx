@@ -37,6 +37,7 @@ const Contact = () => {
           
           <div className="contact-image-wrapper">
              <div className="contact-image-placeholder">
+                <h3 className="contact-image-title">Sua Beleza em Boas Mãos</h3>
              </div>
           </div>
         </div>
