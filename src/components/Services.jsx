@@ -4,18 +4,19 @@ import { Sparkles, Droplets, Smile, Fingerprint, Activity, Heart, Star, Sun, Win
 import './Services.css';
 
 const services = [
-  { id: 1, name: 'Microneedling', icon: <Activity size={24} />, desc: 'Renovação celular e estimulação de colagénio.' },
-  { id: 2, name: 'Limpeza facial', icon: <Droplets size={24} />, desc: 'Pele livre de impurezas, macia e hidratada.' },
-  { id: 3, name: 'Epilação a laser', icon: <Sun size={24} />, desc: 'Pele lisa com tecnologia indolor.' },
-  { id: 4, name: 'Epilação a cera', icon: <Wind size={24} />, desc: 'Método tradicional com cera hipoalergênica.' },
-  { id: 5, name: 'Epilação a linha', icon: <Scissors size={24} />, desc: 'Design perfeito e remoção precisa.' },
-  { id: 6, name: 'Unhas de gel e Verniz gel', icon: <Gem size={24} />, desc: 'Unhas impecáveis e duradouras.' },
-  { id: 7, name: 'Drenagem Linfática', icon: <Fingerprint size={24} />, desc: 'Redução de retenção de líquidos e toxinas.' },
-  { id: 8, name: 'Massagem Terapêutica', icon: <Heart size={24} />, desc: 'Alívio de dores e tensões musculares.' },
-  { id: 9, name: 'Massagem de relaxamento', icon: <Smile size={24} />, desc: 'Momento puro de tranquilidade.' },
-  { id: 10, name: 'Lifting de Pestanas', icon: <Eye size={24} />, desc: 'Olhar marcante com pestanas curvadas.' },
-  { id: 11, name: 'Hidragloss', icon: <Sparkles size={24} />, desc: 'Lábios hidratados e revitalizados.' },
-  { id: 12, name: 'Browlamination', icon: <Star size={24} />, desc: 'Sobrancelhas alinhadas e volumosas.' },
+  { id: 0, name: 'LPG Endermologie (Cellu M6)', icon: <Sparkles size={24} />, desc: 'Tratamento inovador e indolor para redução de celulite, gordura localizada e firmeza corporal e facial.' },
+  { id: 1, name: 'Microneedling', icon: <Activity size={24} />, desc: 'Renovação celular profunda, redução de marcas e estimulação ativa de colagénio.' },
+  { id: 2, name: 'Limpeza de Pele Profunda', icon: <Droplets size={24} />, desc: 'Desintoxicação profunda, remoção de impurezas e hidratação celular completa.' },
+  { id: 3, name: 'Epilação a Laser Diodo', icon: <Sun size={24} />, desc: 'Eliminação definitiva de pêlos com tecnologia de ponta ultra confortável.' },
+  { id: 4, name: 'Epilação a Cera', icon: <Wind size={24} />, desc: 'Método tradicional extremamente preciso com cera hipoalergénica premium.' },
+  { id: 5, name: 'Epilação a Linha (Threading)', icon: <Scissors size={24} />, desc: 'Definição perfeita do olhar e remoção delicada de pêlos faciais.' },
+  { id: 6, name: 'Unhas de Gel & Verniz Gel', icon: <Gem size={24} />, desc: 'Manicure e pedicure impecáveis com acabamento de alta durabilidade e brilho.' },
+  { id: 7, name: 'Drenagem Linfática', icon: <Fingerprint size={24} />, desc: 'Eliminação eficaz de toxinas, redução do inchaço e melhoria da circulação.' },
+  { id: 8, name: 'Massagem Terapêutica', icon: <Heart size={24} />, desc: 'Alívio profundo de dores, tensões acumuladas e restabelecimento muscular.' },
+  { id: 9, name: 'Massagem de Relaxamento', icon: <Smile size={24} />, desc: 'Uma experiência sensorial única para acalmar a mente e relaxar o corpo.' },
+  { id: 10, name: 'Lifting de Pestanas', icon: <Eye size={24} />, desc: 'Realce natural da curvatura e comprimento das suas pestanas sem extensões.' },
+  { id: 11, name: 'Hidragloss Labial', icon: <Sparkles size={24} />, desc: 'Revitalização intensa e super hidratação para lábios rejuvenescidos e volumosos.' },
+  { id: 12, name: 'Brow Lamination', icon: <Star size={24} />, desc: 'Alinhamento, preenchimento e design moderno para sobrancelhas impactantes.' },
 ];
 
 const Services = () => {
@@ -41,6 +42,31 @@ const Services = () => {
             </motion.div>
           ))}
         </div>
+
+        <motion.div 
+          className="services-cta"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+          style={{
+            marginTop: '4rem',
+            textAlign: 'center',
+            padding: '3rem 2rem',
+            borderRadius: '2rem',
+            background: 'linear-gradient(135deg, var(--bg-alt) 0%, var(--accent) 100%)',
+            boxShadow: 'var(--shadow)',
+            border: '1px solid rgba(212, 175, 55, 0.15)'
+          }}
+        >
+          <h3 style={{ fontSize: '1.8rem', marginBottom: '0.75rem', fontFamily: 'var(--font-heading)' }}>Preços & Serviços Completos</h3>
+          <p style={{ color: 'var(--text-muted)', marginBottom: '2rem', maxWidth: '600px', margin: '0 auto 2rem auto' }}>
+            Consulte a lista completa de tratamentos, durações e tabelas de preços atualizadas diretamente no nosso portal de agendamento online no Zappy.
+          </p>
+          <a href="https://zappysoftware.com/m/sofiapiairoestetica#items" target="_blank" rel="noreferrer" className="btn btn-primary" style={{ padding: '1rem 2.5rem', fontSize: '1.05rem' }}>
+            Ver Catálogo de Preços & Reservar
+          </a>
+        </motion.div>
       </div>
     </section>
   );

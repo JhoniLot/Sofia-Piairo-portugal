@@ -17,6 +17,7 @@ const Navbar = () => {
 
   const navLinks = [
     { name: 'Início', href: '#home' },
+    { name: 'Sobre Nós', href: '#about' },
     { name: 'Tratamentos', href: '#services' },
     { name: 'Contacto', href: '#contact' },
   ];
@@ -24,19 +25,13 @@ const Navbar = () => {
   return (
     <header className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="container navbar-container">
-        <a href="#home" className="logo">
-          <img 
-            src="/logo.png" 
-            alt="Aqua Blue Logo" 
-            style={{ 
-              height: '65px', 
-              mixBlendMode: 'multiply',
-              transition: 'transform 0.3s' 
-            }} 
-            onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
-            onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
-          />
-          <span>AquaBlue</span>
+        <a href="#home" className="logo" style={{ display: 'flex', flexDirection: 'column', gap: '2px', alignItems: 'flex-start' }}>
+          <span style={{ fontSize: '1.45rem', fontWeight: '700', letterSpacing: '1px', color: 'var(--text-main)', fontFamily: 'var(--font-heading)' }}>
+            Sofia Piairo
+          </span>
+          <span style={{ fontSize: '0.65rem', letterSpacing: '3px', color: 'var(--primary)', fontWeight: '600', textTransform: 'uppercase', marginTop: '-3px' }}>
+            Estética Avançada
+          </span>
         </a>
 
         <nav className="nav-links">
@@ -45,7 +40,7 @@ const Navbar = () => {
               {link.name}
             </a>
           ))}
-          <a href="#contact" className="btn btn-primary btn-sm">Agendar</a>
+          <a href="https://zappysoftware.com/m/sofiapiairoestetica#items" target="_blank" rel="noreferrer" className="btn btn-primary btn-sm">Agendar</a>
         </nav>
 
         <button className="mobile-toggle" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
@@ -66,7 +61,7 @@ const Navbar = () => {
                 {link.name}
               </a>
             ))}
-            <a href="#contact" className="btn btn-primary" style={{textAlign: 'center', marginTop: '1rem'}} onClick={() => setMobileMenuOpen(false)}>Agendar</a>
+            <a href="https://zappysoftware.com/m/sofiapiairoestetica#items" target="_blank" rel="noreferrer" className="btn btn-primary" style={{textAlign: 'center', marginTop: '1rem'}} onClick={() => setMobileMenuOpen(false)}>Agendar</a>
           </motion.div>
         )}
       </AnimatePresence>
