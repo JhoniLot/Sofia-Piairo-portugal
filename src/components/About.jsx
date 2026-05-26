@@ -15,7 +15,7 @@ const About = () => {
           transition={{ duration: 0.8 }}
         >
           <div className="about-img-frame">
-            <img src="/contact.png" alt="Sofia Piairo Centro de Estética" className="about-img" />
+            <img src="/about.jpg" alt="Gabinete de Tratamentos Sofia Piairo" className="about-img" />
           </div>
         </motion.div>
 
