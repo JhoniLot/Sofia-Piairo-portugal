@@ -76,42 +76,60 @@
 
 @media (max-width: 992px) {
   .hero {
-    padding-top: 7rem;
-    padding-bottom: 4rem;
+    flex-direction: column;
+    min-height: auto;
+    padding-top: 4.5rem; /* Espaço para a navbar fixa */
+    align-items: stretch;
   }
   .hero-bg-container {
+    position: relative;
     width: 100%;
+    height: 350px; /* Foto ganha destaque total no topo */
+    z-index: 1;
   }
   .hero-overlay {
-    background: rgba(250, 249, 246, 0.4); /* Overlay leve para harmonizar */
+    display: none; /* Sem necessidade de degradê sobre a imagem */
   }
   .hero-content {
     max-width: 100%;
-    background: rgba(250, 249, 246, 0.92); /* Fundo creme semi-transparente */
-    padding: 2.5rem 2rem;
-    border-radius: var(--radius);
-    backdrop-filter: blur(12px); /* Efeito glassmorphism luxuoso */
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(212, 175, 55, 0.15); /* Borda dourada sutil */
-    box-shadow: 0 15px 35px rgba(45, 42, 38, 0.08);
+    padding: 2.5rem 1.5rem 3rem 1.5rem;
+    text-align: center;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+  .hero-subtitle {
+    margin-left: auto;
+    margin-right: auto;
+    display: table; /* Centraliza a badge */
+    margin-bottom: 1.2rem;
   }
   .hero-title {
-    font-size: 2.5rem;
-    line-height: 1.3;
+    font-size: 2.4rem;
+    line-height: 1.25;
+    margin-bottom: 1.2rem;
   }
   .hero-description {
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     margin-bottom: 2rem;
-    color: var(--text-main); /* Escurece o texto no mobile para melhor contraste */
+    color: var(--text-muted);
+  }
+  .hero-buttons {
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.8rem;
+    max-width: 320px;
+    margin: 0 auto;
   }
 }
 
 @media (max-width: 768px) {
-  .hero-title {
-    font-size: 2.2rem;
+  .hero-bg-container {
+    height: 280px; /* Reduz ligeiramente a altura em celulares menores */
   }
-  .hero-buttons {
-    flex-direction: column;
-    gap: 0.8rem;
+  .hero-title {
+    font-size: 2.1rem;
   }
 }
