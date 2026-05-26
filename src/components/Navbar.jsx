@@ -25,13 +25,28 @@ const Navbar = () => {
   return (
     <header className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="container navbar-container">
-        <a href="#home" className="logo" style={{ display: 'flex', flexDirection: 'column', gap: '2px', alignItems: 'flex-start' }}>
-          <span style={{ fontSize: '1.45rem', fontWeight: '700', letterSpacing: '1px', color: 'var(--text-main)', fontFamily: 'var(--font-heading)' }}>
-            Sofia Piairo
-          </span>
-          <span style={{ fontSize: '0.65rem', letterSpacing: '3px', color: 'var(--primary)', fontWeight: '600', textTransform: 'uppercase', marginTop: '-3px' }}>
-            Estética Avançada
-          </span>
+        <a href="#home" className="logo" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+          <img 
+            src="/logo.png" 
+            alt="Sofia Piairo Logo" 
+            style={{ 
+              height: '50px', 
+              width: '50px',
+              objectFit: 'contain',
+              mixBlendMode: 'multiply',
+              transition: 'transform 0.3s' 
+            }} 
+            onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.08)'}
+            onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
+          />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '2px', alignItems: 'flex-start' }}>
+            <span style={{ fontSize: '1.45rem', fontWeight: '700', letterSpacing: '1px', color: 'var(--text-main)', fontFamily: 'var(--font-heading)', lineHeight: '1' }}>
+              Sofia Piairo
+            </span>
+            <span style={{ fontSize: '0.62rem', letterSpacing: '2.5px', color: 'var(--primary)', fontWeight: '600', textTransform: 'uppercase', marginTop: '1px', lineHeight: '1' }}>
+              Estética Avançada
+            </span>
+          </div>
         </a>
 
         <nav className="nav-links">
